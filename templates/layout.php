@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $pageTitle; ?></title>
+    <title> <?php echo $labels['sign-in_hub_tittle']; ?> </title>
     <!-- Add your common stylesheets and scripts here -->
     <link rel="stylesheet" href="../assets/css/styles.css">
     <!-- Bootstrap JS -->
@@ -16,7 +16,10 @@
 </head>
 <body>
     <?php include 'header.php'; ?>
-    
+    <div class="container text-center">
+          <h1> <?php echo $labels['afg_slogan']; ?> </h1>
+    </div>    
+
     <div class="content">
         <?php include $content; ?>
     </div>

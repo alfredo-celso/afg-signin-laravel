@@ -1,0 +1,42 @@
+[
+	{
+		"n_id":"1",
+		"s_ip": "::1", 
+		"s_training_center": "00", 
+		"s_location": "N/A",
+		"s_lang":"EN",
+		"s_flag":""
+	},
+	{
+		"n_id":"2",
+		"s_ip": "127.0.0.1", 
+		"s_training_center": "00", 
+		"s_location": "N/A",
+		"s_lang":"EN",
+		"s_flag":""
+	},
+	{
+		"n_id":"3",
+		"s_ip": "::1", 
+		"s_training_center": "11", 
+		"s_location": "MAD",
+		"s_lang":"ES",
+		"s_flag":""
+	},
+	{
+		"n_id":"4",
+		"s_ip": "::12", 
+		"s_training_center": "12", 
+		"s_location": "WAW",
+		"s_lang":"PL",
+		"s_flag":""
+	},
+	{
+		"n_id":"5",
+		"s_ip": "::1", 
+		"s_training_center": "19", 
+		"s_location": "FRA",
+		"s_lang":"DE",
+		"s_flag":""
+	}
+]
