@@ -51,7 +51,7 @@ class TCSessionsController extends Controller {
         if ($matchingRow !== null) {
             // print_r($matchingRow);
         } else {
-            echo "<div style='background-color: red; color: white;'><i class='fa-solid fa-bug'> WARNING: No matching row found with the IP: " . $customerIP . " <br> Please notify to AFG staff of this notification. </div>";
+            echo "<div style='background-color: red; color: white;'><i class='fa-solid fa-bug'></i> WARNING: No matching row found with the IP: " . $customerIP . " <br> Please notify to AFG staff of this notification. </div>";
         }
 
 
