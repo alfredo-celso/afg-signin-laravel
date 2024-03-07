@@ -6,6 +6,7 @@ namespace App\Controllers;
 define('BASE_DIR', __DIR__);
 
 require_once BASE_DIR . '/../app/models/2alpha-country-code.php';
+require_once BASE_DIR . '/../app/models/country-ip.php';
 
 class SigninFormController extends Controller {
     public function showPage() {
@@ -15,28 +16,21 @@ class SigninFormController extends Controller {
         // Correct the include path for config.php
         $configFilePath = BASE_DIR . '/../config.php';
         if (!file_exists($configFilePath)) {
-            die('config.php not found');
+            echo "<div style='background-color: red; color: white;'><i class='fa-solid fa-triangle-exclamation'></i> ERROR: config.php file doest not exist or not found. </div>";
         }
         
         $labels = include $configFilePath;
 
+        $matchingRow = json_decode(urldecode($_GET['p_data']), true);
 
-        // Get TC's IP address
-        if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-            $clientIP = $_SERVER['HTTP_X_FORWARDED_FOR'];
-        } else {
-            // Fall back to REMOTE_ADDR if X-Forwarded-For is not present
-            $clientIP = $_SERVER['REMOTE_ADDR'];
-        }
+        // $countryListFilePath pointing to JSON file
+        $countryListFilePath = BASE_DIR . '/../app/models/2alpha_country_code.json';
 
-        // $filePath pointing to your JSON file
-        $filePath = BASE_DIR . '/../app/models/2alpha_country_code.json';
-
-        // Create an instance of the model
+        // Create an instance of the model Country List
         $countryList = new \CountryList();
 
         // Load JSON data
-        $jsonData = $countryList->loadJsonData($filePath);
+        $jsonDataCountryList = $countryList->loadJsonData($countryListFilePath);
        
 
         // Include the specific view (home.php) within the layout

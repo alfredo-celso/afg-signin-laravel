@@ -9,10 +9,13 @@
     $toastMessage = '';
     if ($var === 'start') {
         $toastMessage = $labels['00_welcome_message'];
+        $toastClass = 'toast bg-info text-white fade show';
     } elseif ($var === 'error') {
         $toastMessage = $labels['signin_error'];
+        $toastClass = 'toast bg-danger text-white fade show';
     } elseif ($var === 'signin') {
         $toastMessage = $labels['signin_success'];
+        $toastClass = 'toast bg-success text-white fade show';
     }
     ?>
 
@@ -20,19 +23,43 @@
     <div class="jumbotron home-banner">
         <!-- Centered buttons -->
         <div class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-            <a href="index.php?url=TCSessions/showPage&var=start" class="btn btn-primary btn-lg mx-2"> &nbsp &nbsp FFS &nbsp &nbsp </a>
-            <a href="#" class="btn btn-secondary btn-lg mx-2">Visitor </a>
+            <a href="index.php?url=TCSessions/showPage&var=start" class="btn btn-primary btn-lg mx-2"> &nbsp; &nbsp;<i class="fa-solid fa-paper-plane"> FFS </i> &nbsp; &nbsp;</a>
+
+            <button class="btn btn-secondary btn-lg mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa-regular fa-user"> Visitor </i> </button>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <a href="index.php?url=VisitorCheckin/showPage&var=start" class="btn btn-success btn-lg mx-2"><i class="fa-solid fa-arrow-up"> Check-in </i> </a>
+                        <a href="#" class="btn btn-danger btn-lg mx-2"><i class="fa-solid fa-arrow-down"> Check-out </i> </a>
+                    </div>
+                </div>
+
         </div>
 
         <?php
         // Display toast message based on the 'var' value
         if ($toastMessage) {
-            echo '<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
-                    <div class="toast-body">
-                        ' . $toastMessage . '
+            echo '<div class="toast-container" style="position: absolute; top: 10px; right: 10px;" id="myToast">
+                    <div class="'. $toastClass .' ">
+                        <div class="toast-body">
+                            '. $toastMessage .'
+                        </div>
                     </div>
-                </div>';
+                </div>'; 
         }
-        ?>        
+        ?>
     </div>
 </div>
+
+<script>
+    function myToast(){
+        //alert("Page is loaded");
+        var element = document.getElementById("myToast");
+
+        /* Create toast instance */
+        var myToast = new bootstrap.Toast(element, {
+            delay: 3000
+        });
+        myToast.show(1500);
+    };
+
+</script>

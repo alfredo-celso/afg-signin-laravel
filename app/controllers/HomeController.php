@@ -9,7 +9,7 @@ class HomeController extends Controller {
         // Correct the include path for config.php
         $configFilePath = BASE_DIR . '/../config.php';
         if (!file_exists($configFilePath)) {
-            die('config.php not found');
+            echo "<div style='background-color: red; color: white;'><i class='fa-solid fa-triangle-exclamation'></i> ERROR: config.php file doest not exist or not found. </div>";
         }
         
         $labels = include $configFilePath;

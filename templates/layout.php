@@ -7,11 +7,15 @@
     <title> <?php echo $labels['sign-in_hub_tittle']; ?> </title>
     <!-- Add your common stylesheets and scripts here -->
     <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <!-- FONT Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"  />
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    
 
 </head>
 <body>
@@ -19,11 +23,9 @@
     <div class="container text-center">
           <h1> <?php echo $labels['afg_slogan']; ?> </h1>
     </div>    
-
     <div class="content">
         <?php include $content; ?>
     </div>
-
     <?php include 'footer.php'; ?>
 </body>
 </html>

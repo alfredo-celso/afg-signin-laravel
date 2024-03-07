@@ -5,7 +5,7 @@
 		"s_training_center": "00", 
 		"s_location": "N/A",
 		"s_lang":"EN",
-		"s_flag":""
+		"s_flag":"https://flagsapi.com/US/shiny/64.png"
 	},
 	{
 		"n_id":"2",
@@ -13,7 +13,7 @@
 		"s_training_center": "00", 
 		"s_location": "N/A",
 		"s_lang":"EN",
-		"s_flag":""
+		"s_flag":"https://flagsapi.com/US/shiny/64.png"
 	},
 	{
 		"n_id":"3",
@@ -21,15 +21,15 @@
 		"s_training_center": "11", 
 		"s_location": "MAD",
 		"s_lang":"ES",
-		"s_flag":""
+		"s_flag":"https://flagsapi.com/ES/shiny/64.png"
 	},
 	{
 		"n_id":"4",
-		"s_ip": "::12", 
+		"s_ip": "212.180.218.82", 
 		"s_training_center": "12", 
 		"s_location": "WAW",
 		"s_lang":"PL",
-		"s_flag":""
+		"s_flag":"https://flagsapi.com/PL/shiny/64.png"
 	},
 	{
 		"n_id":"5",
@@ -37,6 +37,14 @@
 		"s_training_center": "19", 
 		"s_location": "FRA",
 		"s_lang":"DE",
-		"s_flag":""
+		"s_flag":"https://flagsapi.com/DE/shiny/64.png"
+	},
+	{
+		"n_id":"6",
+		"s_ip": "127.0.0.1", 
+		"s_training_center": "00", 
+		"s_location": "TLV",
+		"s_lang":"IL",
+		"s_flag":"https://flagsapi.com/IL/shiny/64.png"
 	}
 ]

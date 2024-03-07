@@ -3,10 +3,10 @@
 </div>
 
 <?php
-    $p_date = isset($_GET['p_date']) ? $_GET['p_date'] : '1901-01-01';
-    $p_tc = isset($_GET['p_tc']) ? $_GET['p_tc'] : 'No TC';
-    $p_customer = isset($_GET['p_customer']) ? $_GET['p_customer'] : 'No customer';
-    $p_device = isset($_GET['p_device']) ? $_GET['p_device'] : 'No device';
+    $p_date = $whatDateIsToday;
+    $p_tc = $matchingRow['s_location'];
+    $p_customer = 'GUEST';
+    $p_device = $matchingRow['s_location'];
 
     $toastMessage = 'Sign-in start. Please complete the data required!';
     $toastClass = 'toast bg-info text-white fade show';
@@ -33,7 +33,7 @@
 
         <div class="col-md-3" id="inputDevice0" >
             <label for="inputDevice" class="form-label">Device*</label>
-            <input type="text" class="form-control" id="inputDevice" name="inputDevice" value="<?php echo $p_device; ?>" readonly>
+            <input type="text" class="form-control" id="inputDevice" name="inputDevice" value="<?php echo $p_device; ?> -Facility " readonly>
         </div>
 
         <div class="col-md-3" id="inputIP0" >
@@ -58,15 +58,7 @@
         <div class="col-md-6">
         <label for="selectRole" class="form-label">* Role</label>
         <select class="form-select" id="selectRole" name="selectRole" >
-            <option value="Select role" selected>Select role...</option>
-            <option value="Captain">Captain</option>
-            <option value="First officer">First officer</option>
-            <option value="Student">Student</option>
-            <option value="Instructor">Instructor</option>
-            <option value="Observer">Observer</option>
-            <option value="EASA">EASA</option>
-            <option value="FAA">FAA</option>
-            <option value="Technician">Technician</option>
+            <option value="Visitor" selected>Visitor</option>
         </select>
         </div>
         <div class="col-md-6">

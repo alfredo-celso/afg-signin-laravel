@@ -9,6 +9,7 @@ require_once BASE_DIR . '/../app/controllers/Controller.php';
 require_once BASE_DIR . '/../app/controllers/HomeController.php';
 require_once BASE_DIR . '/../app/controllers/TCSessionsController.php';
 require_once BASE_DIR . '/../app/controllers/SigninFormController.php';
+require_once BASE_DIR . '/../app/controllers/VisitorCheckinController.php';
 
 require_once BASE_DIR . '/../utilities/Router.php';
 
@@ -16,6 +17,7 @@ use App\Controllers\Controller;
 use App\Controllers\HomeController;
 use App\Controllers\TCSessionsController;
 use App\Controllers\SigninFormController;
+use App\Controllers\VisitorCheckinController;
 use App\Utilities\Router;
 
 

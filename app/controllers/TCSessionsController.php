@@ -9,24 +9,55 @@ class TCSessionsController extends Controller {
         // Correct the include path for config.php
         $configFilePath = BASE_DIR . '/../config.php';
         if (!file_exists($configFilePath)) {
-            die('config.php not found');
+            echo "<div style='background-color: red; color: white;'><i class='fa-solid fa-triangle-exclamation'></i> ERROR: config.php file doest not exist or not found. </div>";
         }
         
+        // labels
         $labels = include $configFilePath;
-      
+        // IP's country
+        require_once BASE_DIR . '/../app/models/country-ip.php';
+
         // Get today's date
         $whatDateIsToday = date('Y-m-d');
 
-        // Get client's IP address from X-Forwarded-For header
+        // Get customer's IP address from X-Forwarded-For header
         if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-            $clientIP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            $customerIP = $_SERVER['HTTP_X_FORWARDED_FOR'];
         } else {
             // Fall back to REMOTE_ADDR if X-Forwarded-For is not present
-            $clientIP = $_SERVER['REMOTE_ADDR'];
+            $customerIP = $_SERVER['REMOTE_ADDR'];
         }
 
-        // This value comes from the IP address
-        $deviceLocationId = '11';
+        // $countryIPFilePath pointing to your JSON file
+        $countryIPFilePath = BASE_DIR . '/../app/models/country_ip.json';
+        // Create an instance of the model Country List
+        $countryIP = new \CountryIP();
+        // Load JSON data
+        $jsonDataCountryIP = $countryIP->loadJsonData($countryIPFilePath);
+        
+        //$dataIP = json_decode($jsonDataCountryIP, true);
+
+        $matchingRow = null;
+
+        foreach ($jsonDataCountryIP as $row) {
+            if ($row['s_ip'] === $customerIP) {
+                echo "<div style='background-color: green; color: white;'><i class='fa-solid fa-circle-check'></i> INFO: Matching row found with the IP: " . $customerIP . "</div>";
+                $matchingRow = $row;
+                break; // Stop iterating once a match is found
+            }
+        }
+
+        // Output the matching row
+        if ($matchingRow !== null) {
+            // print_r($matchingRow);
+        } else {
+            echo "<div style='background-color: red; color: white;'><i class='fa-solid fa-bug'> WARNING: No matching row found with the IP: " . $customerIP . " <br> Please notify to AFG staff of this notification. </div>";
+        }
+
+
+        // 11 is Spain, assumed as a default for testing purpose
+        $deviceLocationId = $matchingRow['s_training_center'];
+        //$deviceLocationId = '11';
         
         // Init curl library
         $curl = curl_init();
@@ -57,7 +88,7 @@ class TCSessionsController extends Controller {
         // Decode JSON data into an associative array
         $data = json_decode($apiCurlResponse, true);
 
-        // Filter data by event_type_name = "Full Motion"
+        // Filter data by event_type_name = "Full Motion" NOTE: Modify code to return and empty array []
         $filteredData = array_filter($data['data']['events'], function($event) {
             return $event['event_type_name'] === 'Full Motion';
         });
