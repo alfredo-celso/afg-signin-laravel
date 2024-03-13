@@ -52,7 +52,8 @@ class VisitorCheckinController extends Controller {
         if ($matchingRow !== null) {
             // print_r($matchingRow);
         } else {
-            echo "<div style='background-color: red; color: white;'><i class='fa-solid fa-bug'></i> WARNING: No matching row found with the IP: " . $customerIP . " <br> Please notify to AFG staff of this notification. </div>";
+            echo "<div style='background-color: red; color: white;'><i class='fa-solid fa-bug'></i> WARNING: No matching row found with the IP: " . $customerIP . " <br> Please inform to AFG staff of this case. </div>";
+            $matchingRow = ["s_ip"=>$customerIP, "s_training_center"=>"00", "s_location"=>"N/A", "s_lang"=>"EN", "s_flag"=>"https://flagsapi.com/US/shiny/64.png"];
         }
 
         // $countryListFilePath pointing to JSON file

@@ -16,10 +16,17 @@
     } elseif ($var === 'signin') {
         $toastMessage = $labels['signin_success'];
         $toastClass = 'toast bg-success text-white fade show';
+    } elseif ($var === 'checkout') {
+        $toastMessage = $labels['checkout_success'];
+        $toastClass = 'toast bg-success text-white fade show';
+    } elseif ($var === 'checkin') {
+        $toastMessage = $labels['checkin_success'];
+        $toastClass = 'toast bg-success text-white fade show';
     }
     ?>
 
-    <!-- Add your background image styling here -->
+    <!-- Add your background image styling here <div class="jumbotron home-banner"> -->
+    <?php $stringclass = 'jumbotron '.strtolower(date('D')). '-banner'; ?>
     <div class="jumbotron home-banner">
         <!-- Centered buttons -->
         <div class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
@@ -28,8 +35,8 @@
             <button class="btn btn-secondary btn-lg mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa-regular fa-user"> Visitor </i> </button>
                 <div class="collapse" id="collapseExample">
                     <div class="card card-body">
-                        <a href="index.php?url=VisitorCheckin/showPage&var=start" class="btn btn-success btn-lg mx-2"><i class="fa-solid fa-arrow-up"> Check-in </i> </a>
-                        <a href="#" class="btn btn-danger btn-lg mx-2"><i class="fa-solid fa-arrow-down"> Check-out </i> </a>
+                        <a href="index.php?url=VisitorCheckin/showPage&var=start" class="btn btn-success btn-lg mx-2"> Check-in <i class="fa-solid fa-arrow-right-to-bracket"> </i> </a>
+                        <a href="index.php?url=VisitorCheckout/showPage&var=start" class="btn btn-danger btn-lg mx-2"> <i class="fa-solid fa-arrow-right-from-bracket"> </i> Check-out</a>
                     </div>
                 </div>
 

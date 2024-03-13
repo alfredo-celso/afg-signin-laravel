@@ -4,7 +4,49 @@ body {
 }
 
 .home-banner {
-    background-image: url('../img/monday.jpg');
+    background-image: url('../img/tue.jpg');
+    background-size: 90% 600px;
+    height: 600px
+}
+
+.mon-banner {
+    background-image: url('../img/mon.jpg');
+    background-size: 90% 600px;
+    height: 600px
+}
+
+.tue-banner {
+    background-image: url('../img/tue.jpg');
+    background-size: 90% 600px;
+    height: 600px
+}
+
+.wed-banner {
+    background-image: url('../img/wed.jpg');
+    background-size: 90% 600px;
+    height: 600px
+}
+
+.thu-banner {
+    background-image: url('../img/thu.jpg');
+    background-size: 90% 600px;
+    height: 600px
+}
+
+.fri-banner {
+    background-image: url('../img/fri.jpg');
+    background-size: 90% 600px;
+    height: 600px
+}
+
+.sat-banner {
+    background-image: url('../img/sat.jpg');
+    background-size: 90% 600px;
+    height: 600px
+}
+
+.sun-banner {
+    background-image: url('../img/sun.jpg');
     background-size: 90% 600px;
     height: 600px
 }

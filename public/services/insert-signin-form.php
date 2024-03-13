@@ -33,7 +33,11 @@
         $stmt->bindParam(':p_ip', $v_ip);
 
         if ($stmt->execute()) {
-            header("Location: http://localhost:8080/index.php?url=Home/index&var=signin");
+            if ($v_customer === 'GUEST'){
+                header("Location: http://localhost:8080/index.php?url=Home/index&var=checkin");
+            } else {
+                header("Location: http://localhost:8080/index.php?url=Home/index&var=signin");
+            }
             exit();
         } else {
             header("Location: http://localhost:8080/index.php?url=Home/index&var=error");

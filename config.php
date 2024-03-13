@@ -14,6 +14,8 @@ return [
     'signin_start' => 'Sign-in start. Please complete the data required!',
     'signin_success' => 'Sign-in successful. Thank you for joining!',
     'signin_error' => 'Sign-in error. Please contact support technician!',
+    'checkin_success' => 'Check-in successful. Thank you for joining!',
+    'checkout_success' => 'Check-out successful. See you soon and take care!',
     // Add more labels as needed
 ];
 ?>
