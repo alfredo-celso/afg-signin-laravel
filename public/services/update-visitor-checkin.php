@@ -28,7 +28,7 @@
             exit();
         }
         */
-        header("Location: http://localhost:8080/index.php?url=Home/index&var=checkout");
+        header("Location: /index.php?url=Home/index&var=checkout");
         exit();
 
     } else {

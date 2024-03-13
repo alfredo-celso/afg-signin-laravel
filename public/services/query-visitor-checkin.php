@@ -19,15 +19,15 @@
 
         if ($numRows === 0) {
             //echo "<div style='background-color: yellow; color: black;'><i class='fa-solid fa-triangle-exclamation'></i> WARNING: Does not exist any record with name/surname: ".$v_nameSurname." Try again... </div>";
-            header("Location: http://localhost:8080/index.php?url=VisitorCheckout/showPage&var=noresults&p_visitor=".$v_nameSurname);
+            header("Location: /index.php?url=VisitorCheckout/showPage&var=noresults&p_visitor=".$v_nameSurname);
             exit();
         } else {
 
-            header("Location: http://localhost:8080/index.php?url=VisitorCheckout/showPage&var=results&p_visitor=".$v_nameSurname."&p_data=". urlencode(json_encode($results)));
+            header("Location: /index.php?url=VisitorCheckout/showPage&var=results&p_visitor=".$v_nameSurname."&p_data=". urlencode(json_encode($results)));
             exit();
         }
     } else {
-        header("Location: http://localhost:8080/index.php?url=TCSessions/showPage&var=error");
+        header("Location: /index.php?url=TCSessions/showPage&var=error");
         exit();
     }
 

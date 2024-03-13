@@ -34,17 +34,17 @@
 
         if ($stmt->execute()) {
             if ($v_customer === 'GUEST'){
-                header("Location: http://localhost:8080/index.php?url=Home/index&var=checkin");
+                header("Location: /index.php?url=Home/index&var=checkin");
             } else {
-                header("Location: http://localhost:8080/index.php?url=Home/index&var=signin");
+                header("Location: /index.php?url=Home/index&var=signin");
             }
             exit();
         } else {
-            header("Location: http://localhost:8080/index.php?url=Home/index&var=error");
+            header("Location: /index.php?url=Home/index&var=error");
             exit();
         }
     } else {
-        header("Location: http://localhost:8080/index.php?url=TCSessions/showPage&var=error");
+        header("Location: /index.php?url=TCSessions/showPage&var=error");
         exit();
     }
 
