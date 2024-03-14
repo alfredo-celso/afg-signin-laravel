@@ -9,13 +9,14 @@ return [
     '12_welcome_message' => 'Witaj do nasz Training Center we Warszawa!',
     '19_welcome_message' => 'Willkommen in unserem Training Center in Frankfurt!',
     'sessions_start' => 'Please select the exact simulator and session!',
-    'sessions_error' => 'Session error. Please contact support technician!',
+    'sessions_error' => 'Session error. Please contact manager Training Center!',
     'sessions_cero' => 'No sessions, Please contact manager Training Center!',
     'signin_start' => 'Sign-in start. Please complete the data required!',
     'signin_success' => 'Sign-in successful. Thank you for joining!',
-    'signin_error' => 'Sign-in error. Please contact support technician!',
+    'signin_error' => 'Sign-in error. Please contact manager Training Center!',
     'checkin_success' => 'Check-in successful. Thank you for joining!',
     'checkout_success' => 'Check-out successful. See you soon and take care!',
+    'checkout_error' => 'Check-out error. Please contact manager Training Center!',
     // Add more labels as needed
 ];
 ?>

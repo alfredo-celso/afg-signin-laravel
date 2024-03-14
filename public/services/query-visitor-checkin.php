@@ -8,7 +8,7 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $v_nameSurname = strtoupper($_POST['inputName']);
 
-        $sql = "select n_id as 'ID', s_name_surname as 'NameSurname', s_session as 'Check_in' from signin_form where s_name_surname LIKE CONCAT('%', :p_name_surname, '%') and b_status = 1 and s_role = 'VISITOR' and d_check_out = '0000-00-00 00:00:00'";
+        $sql = "select n_id as 'ID', s_name_surname as 'NameSurname', date_format(d_check_in, '%Y-%m-%d %H:%i') as 'Check_in' from signin_form where s_name_surname LIKE CONCAT('%', :p_name_surname, '%') and b_status = 1 and s_role = 'VISITOR' and d_check_out = '0000-00-00 00:00:00' order by 3";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':p_name_surname', $v_nameSurname);
         $stmt->execute();
@@ -27,7 +27,7 @@
             exit();
         }
     } else {
-        header("Location: /index.php?url=TCSessions/showPage&var=error");
+        header("Location: index.php?url=VisitorCheckout/showPage&var=error");
         exit();
     }
 

@@ -74,6 +74,10 @@ class VisitorCheckoutController extends Controller {
         if($_GET['var']==='results'){
             $checkoutList = json_decode(urldecode($_GET['p_data']), true); 
         }
+
+        if($_GET['var']==='error'){
+            
+        }
     
     }
 

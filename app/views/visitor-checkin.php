@@ -8,7 +8,7 @@
     $p_customer = 'GUEST';
     $p_device = $matchingRow['s_location'];
 
-    $toastMessage = 'Sign-in start. Please complete the data required!';
+    $toastMessage = 'Check-in start. Please complete the data required!';
     $toastClass = 'toast bg-info text-white fade show';
 ?>
 <div class="container-sm">
@@ -83,7 +83,7 @@
         </div>
 
         <div class="col-12">
-        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button type="submit" class="btn btn-primary">Check in</button>
         </div>
     </form>
 </div>

@@ -2,7 +2,23 @@
     <img src="<?php echo $matchingRow['s_flag'] ?>">
 </div>
 
-<?php if ($_GET['var']==='start' OR $_GET['var']==='noresults') { ?>;
+<?php 
+    if ($_GET['var']!='results') {
+        switch($_GET['var']){
+            case "noresults":
+                $toastMessage = $labels['checkout_error'];
+                $toastClass = 'toast bg-danger text-white fade show';
+                break;
+            case "error":
+                $toastMessage = $labels['checkout_error'];
+                $toastClass = 'toast bg-danger text-white fade show';
+                break;
+            default:
+                $toastMessage = $labels['sessions_start'];
+                $toastClass = 'toast bg-info text-white fade show';
+        }
+
+?>;
 <!-- Display form for GET method -->
 
 <div class="container-sm">
@@ -55,3 +71,17 @@
         </div>
     </div>
 <?php } ?>
+
+<script>
+    function myToast(){
+        //alert("Page is loaded");
+        var element = document.getElementById("myToast");
+
+        /* Create toast instance */
+        var myToast = new bootstrap.Toast(element, {
+            delay: 3000
+        });
+        myToast.show(1500);
+    };
+
+</script>
