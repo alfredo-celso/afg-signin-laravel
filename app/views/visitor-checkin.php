@@ -63,9 +63,8 @@
         </div>
         <div class="col-md-6">
             <label for="selectCitizen" class="form-label">Citizenship:</label>
-            <select class="form-select" id="selectCitizen" name="selectCitizen">
-                <option value="citizen0">Select citizenship</option>
-
+            <select class="form-select" id="selectCitizen" name="selectCitizen" >
+                <option value=""> Select citizenship </option>
                 <?php
                     // Assuming $jsonData is your JSON data loaded from the model
                     foreach ($jsonDataCountryList as $item) {

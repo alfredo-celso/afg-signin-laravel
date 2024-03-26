@@ -11,15 +11,22 @@ require_once BASE_DIR . '/../app/controllers/TCSessionsController.php';
 require_once BASE_DIR . '/../app/controllers/SigninFormController.php';
 require_once BASE_DIR . '/../app/controllers/VisitorCheckinController.php';
 require_once BASE_DIR . '/../app/controllers/VisitorCheckoutController.php';
+require_once BASE_DIR . '/../app/controllers/LoginController.php';
+require_once BASE_DIR . '/../app/controllers/AdminReportsController.php';
 
 require_once BASE_DIR . '/../utilities/Router.php';
 
+// Operations
 use App\Controllers\Controller;
 use App\Controllers\HomeController;
 use App\Controllers\TCSessionsController;
 use App\Controllers\SigninFormController;
 use App\Controllers\VisitorCheckinController;
 use App\Controllers\VisitorCheckoutController;
+// Administration
+use App\Controllers\LoginController;
+use App\Controllers\AdminReportsController;
+
 use App\Utilities\Router;
 
 

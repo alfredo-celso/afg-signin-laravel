@@ -27,7 +27,9 @@
 
     <!-- Add your background image styling here <div class="jumbotron home-banner"> -->
     <?php $stringclass = 'jumbotron '.strtolower(date('D')). '-banner'; ?>
-    <div class="jumbotron home-banner">
+    
+    <?php echo "<div class='".$stringclass."'>"; ?>
+        
         <!-- Centered buttons -->
         <div class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
             <a href="index.php?url=TCSessions/showPage&var=start" class="btn btn-primary btn-lg mx-2"> &nbsp; &nbsp;<i class="fa-solid fa-paper-plane"> FFS </i> &nbsp; &nbsp;</a>
@@ -41,20 +43,20 @@
                 </div>
 
         </div>
-
-        <?php
-        // Display toast message based on the 'var' value
-        if ($toastMessage) {
-            echo '<div class="toast-container" style="position: absolute; top: 10px; right: 10px;" id="myToast">
-                    <div class="'. $toastClass .' ">
-                        <div class="toast-body">
-                            '. $toastMessage .'
-                        </div>
-                    </div>
-                </div>'; 
-        }
-        ?>
     </div>
+    <?php
+    // Display toast message based on the 'var' value
+    if ($toastMessage) {
+        echo '<div class="toast-container" style="position: absolute; top: 10px; right: 10px;" id="myToast">
+                <div class="'. $toastClass .' ">
+                    <div class="toast-body">
+                        '. $toastMessage .'
+                    </div>
+                </div>
+            </div>'; 
+    }
+    ?>
+    
 </div>
 
 <script>
