@@ -25,7 +25,7 @@ $var = isset($_GET['slowa']) ? $_GET['slowa'] : 'G1T6TQraLpx!';
                     <span class="text-right"> <a href="/index.php?url=AdminReports/showPage&var=start&slowa=G1T6TQraLpx!"> <i class="fa-solid fa-file"></i> Reports </a> </span>
                 </div>
                 <div class="ml-auto">
-                    <span class="text-right"> <a href="#"> <i class="fa-solid fa-paper-plane"></i> Register FFS </a> </span>
+                    <span class="text-right"> <a href="/index.php?url=AdminSignin/showPage&var=start&slowa=G1T6TQraLpx!"> <i class="fa-solid fa-paper-plane"></i> Register FFS </a> </span>
                 </div>
 
             <?php } ?>

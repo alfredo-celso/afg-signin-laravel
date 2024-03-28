@@ -19,10 +19,11 @@
     <div class="container">
 
         <?php $jsonEncodeArray = urlencode(json_encode($matchingRow)); ?>
+        <img src="<?php echo $matchingRow['s_flag'] ?>">
         <?php
         // Group events by device_code
         $groupedData = [];
-        foreach ($filteredDataWithHour as $event) {
+        foreach ($filteredEvents as $event) {
             $deviceCode = $event['device_code'];
             if (!isset($groupedData[$deviceCode])) {
                 $groupedData[$deviceCode] = [];
@@ -33,7 +34,7 @@
         
         <hr> <!-- Add a line separator between rows -->
         <?php
-            if (count($filteredDataWithHour) === 0){
+            if (count($filteredEvents) === 0){
                 echo "<h3 style='background-color:red; color:white;'> NO SESSIONS </h3>";
                 $toastMessage = $labels['sessions_cero'];    
             }
@@ -41,7 +42,6 @@
         <?php foreach ($groupedData as $deviceCode => $events): ?>
             <div>
                 <h3>SIM:<?php echo $deviceCode; ?></h3>
-                <img src="<?php echo $matchingRow['s_flag'] ?>">
             </div>
 
             <div class="row row-cols-1 row-cols-md-4 g-4">
