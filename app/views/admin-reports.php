@@ -107,7 +107,7 @@
                     <td> <?php echo $event['TrainingCenter']; ?> </td>
                     <td> <?php echo $event['Device']; ?> </td>
                     <th>
-                        <a href="services/update-visitor-checkin.php?p_id=<?php echo $event['ID']; ?>"> <i class="fa-solid fa-minus"></i> </a> 
+                        <a href="#"> <i class="fa-solid fa-minus"></i> </a> 
                     </th>
                     </tr>
                     
@@ -122,6 +122,8 @@
 <script>
     function myToast(){
         //alert("Page is loaded");
+        //<a href="services/update-visitor-checkin.php?p_id=<?php echo $event['ID']; ?>"> <i class="fa-solid fa-minus"></i> </a> 
+
         var element = document.getElementById("myToast");
 
         /* Create toast instance */
