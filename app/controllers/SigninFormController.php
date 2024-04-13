@@ -5,7 +5,7 @@ namespace App\Controllers;
 
 define('BASE_DIR', __DIR__);
 
-require_once BASE_DIR . '/../app/models/2alpha-country-code.php';
+// require_once BASE_DIR . '/../app/models/2alpha-country-code.php';
 require_once BASE_DIR . '/../app/models/country-ip.php';
 
 class SigninFormController extends Controller {
@@ -24,13 +24,13 @@ class SigninFormController extends Controller {
         $matchingRow = json_decode(urldecode($_GET['p_data']), true);
 
         // $countryListFilePath pointing to JSON file
-        $countryListFilePath = BASE_DIR . '/../app/models/2alpha_country_code.json';
+        // $countryListFilePath = BASE_DIR . '/../app/models/2alpha_country_code.json';
 
         // Create an instance of the model Country List
-        $countryList = new \CountryList();
+        // $countryList = new \CountryList();
 
         // Load JSON data
-        $jsonDataCountryList = $countryList->loadJsonData($countryListFilePath);
+        // $jsonDataCountryList = $countryList->loadJsonData($countryListFilePath);
        
 
         // Include the specific view (home.php) within the layout
