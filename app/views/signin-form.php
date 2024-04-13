@@ -69,18 +69,17 @@
             <option value="Technician">Technician</option>
         </select>
         </div>
-        <div class="col-md-6">
-            <label for="selectCitizen" class="form-label">Citizenship:</label>
-            <select class="form-select" id="selectCitizen" name="selectCitizen">
 
-                <?php
-                    // Assuming $jsonData is your JSON data loaded from the model
-                    foreach ($jsonDataCountryList as $item) {
-                        echo '<option value="' . $item['Code'] . '">' . $item['Country'] . '</option>';
-                    }
-                ?>
-            </select>
+        <div class="col-md-6">
+            <label class="form-label">Citizenship:</label>
+            <?php include 'SelectCountries.php'; ?>
         </div>
+
+        <div class="col-md-6">
+            <label class="form-label">Citizenship:</label>
+            <?php include 'SelectCountries.php'; ?>
+        </div>
+
 
         <div class="col-md-6">
         <input class="form-check-input" type="checkbox" value="" id="safetyCheck" name="safetyCheck" required>
@@ -162,3 +161,20 @@
     };
 
 </script>
+
+<!-- Old select citizenship object
+<div class="col-md-6">
+    <label for="selectCitizen" class="form-label">Citizenship:</label>
+    <select class="form-select" id="selectCitizen" name="selectCitizen">
+        
+        <?php
+            /*
+            // Assuming $jsonData is your JSON data loaded from the model
+            foreach ($jsonDataCountryList as $item) {
+                echo '<option value="' . $item['Code'] . '">' . $item['Country'] . '</option>';
+            }
+            */
+        ?>
+    </select>
+</div>
+-->
