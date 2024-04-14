@@ -76,12 +76,6 @@
         </div>
 
         <div class="col-md-6">
-            <label class="form-label">Citizenship:</label>
-            <?php include 'SelectCountries.php'; ?>
-        </div>
-
-
-        <div class="col-md-6">
         <input class="form-check-input" type="checkbox" value="" id="safetyCheck" name="safetyCheck" required>
         <label class="form-check-label" for="safetyCheck">
             <bold style="color: rgb(255, 0, 0);">I declare that I am familiar with the FIRE SAFETY and SAFETY BRIEFING instructions provided by AFG.</bold>
