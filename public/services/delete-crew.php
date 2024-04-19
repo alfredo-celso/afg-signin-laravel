@@ -10,7 +10,7 @@
         // Retrieve parameters from the URL
         $v_id = isset($_GET['p_id']) ? $_GET['p_id'] : 0;
 
-        $sql = "update signin_form set d_check_out = NOW() where n_id = :p_id and b_status = 1";
+        $sql = "update signin_form set b_status = 0 where n_id = :p_id";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':p_id', $v_id);
         $stmt->execute();
@@ -20,16 +20,16 @@
         $numRows = $stmt->rowCount();
 
         if ($numRows === 0) {
-            header("/index.php?url=VisitorCheckout/showPage&var=error");
+            header("/index.php?url=AdminReports/showPage&var=error&slowa=G1T6TQraLpx!");
             exit();
         } else {
-            header("Location: /index.php?url=Home/index&var=checkout");
+            header("Location: /index.php?url=AdminReports/showPage&var=start&slowa=G1T6TQraLpx!");
             exit();    
         }
         
 
     } else {
-        header("Location: /index.php?url=VisitorCheckout/showPage&var=error");
+        header("Location: /index.php?url=AdminReports/showPage&var=error&slowa=G1T6TQraLpx!");
         exit();
     }
 

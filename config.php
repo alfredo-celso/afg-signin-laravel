@@ -17,6 +17,8 @@ return [
     'checkin_success' => 'Check-in successful. Thank you for joining!',
     'checkout_success' => 'Check-out successful. See you soon and take care!',
     'checkout_error' => 'Check-out error. Please contact manager Training Center!',
+    'report_start' => 'Please setup the parameters to query report!',
+    'report_error' => 'Report error. No results with the setup parameters!',
     // Add more labels as needed
 ];
 ?>

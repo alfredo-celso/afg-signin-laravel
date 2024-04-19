@@ -33,11 +33,14 @@
         $numRows = count($results);
 
         if ($numRows === 0) {
-            //echo "<div style='background-color: yellow; color: black;'><i class='fa-solid fa-triangle-exclamation'></i> WARNING: Does not exist any record with name/surname: ".$v_nameSurname." Try again... </div>";
-            header("Location: /index.php?url=AdminReports/showPage&var=start&slowa=G1T6TQraLpx!");
+            header("Location: /index.php?url=AdminReports/showPage&var=norecords&slowa=G1T6TQraLpx!");
             exit();
         } else {
-            header("Location: /index.php?url=AdminReports/showPage&var=results&slowa=G1T6TQraLpx!"."&p_data=". urlencode(json_encode($results)));
+            session_start();
+
+            // Store the data in a session variable
+            $_SESSION['p_data'] = $results;
+            header("Location: /index.php?url=AdminReports/showPage&var=results&slowa=G1T6TQraLpx!");
             exit();
         }
     } else {

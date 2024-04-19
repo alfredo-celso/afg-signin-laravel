@@ -11,9 +11,9 @@ class TCSessionsController extends Controller {
         if (!file_exists($configFilePath)) {
             echo "<div style='background-color: red; color: white;'><i class='fa-solid fa-triangle-exclamation'></i> ERROR: config.php file doest not exist or not found. </div>";
         }
-        
         // labels
         $labels = include $configFilePath;
+
         // IP's country
         require_once BASE_DIR . '/../app/models/country-ip.php';
 

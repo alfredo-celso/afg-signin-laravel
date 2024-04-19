@@ -59,8 +59,8 @@ class AdminReportsController extends Controller {
         if($_GET['var']==='start'){
         }
 
-        if($_GET['var']==='loginchecked'){
-            
+        if($_GET['var']==='norecords'){
+            echo "<div style='background-color: red; color: white;'><i class='fa-solid fa-bug'></i> WARNING: No records match with the period and/or TC </div>";            
         }
         //echo "<div style='background-color: orange; color: black;'><i class='fa-solid fa-bug'></i> GET: Method GET launched! </div>";
     

@@ -73,7 +73,16 @@
 </form>
 
 </div>
-<?php } else { ?>
+<?php } else {
+        // Start the session to access session data
+        session_start();
+
+        // Retrieve the data from the session
+        $results = $_SESSION['p_data'];
+
+        // Remove the data from the session if it's no longer needed
+        unset($_SESSION['p_data']);        
+    ?>
     <div class="container-sm">
         <?php echo "This is the list of the Results "?> <a href="index.php?url=AdminReports/showPage&var=start&slowa=G1T6TQraLpx!"> <i class="fa-solid fa-arrow-rotate-left"></i> </a>
     </div>
@@ -85,6 +94,7 @@
                     <th scope="col">Id</th>
                     <th scope="col">Date</th>
                     <th scope="col">Name and surname</th>
+                    <th scope="col">Citizenship</th>
                     <th scope="col">Role</th>
                     <th scope="col">Entry</th>
                     <th scope="col">Customer</th>
@@ -95,19 +105,20 @@
                 </thead>
                 <tbody>
                     
-                <?php foreach (json_decode($_GET['p_data'],true) as $event): ?>
+                <?php foreach ($results as $event): ?>
 
                     <tr>
                     <th scope="row"> <?php echo $event['ID']; ?> </th>
                     <td> <?php echo $event['Date']; ?> </td>
                     <td> <?php echo $event['NameSurname']; ?> </td>
+                    <td> <?php echo $event['Citizenship']; ?> </td>
                     <td> <?php echo $event['Role']; ?> </td>
                     <td> <?php echo $event['Entry']; ?> </td>
                     <td> <?php echo $event['Customer']; ?> </td>
                     <td> <?php echo $event['TrainingCenter']; ?> </td>
                     <td> <?php echo $event['Device']; ?> </td>
                     <th>
-                        <a href="#"> <i class="fa-solid fa-minus"></i> </a> 
+                        <a href="services/delete-crew.php?p_id=<?php echo $event['ID']; ?>"> <i class="fa-solid fa-minus"></i> </a> 
                     </th>
                     </tr>
                     

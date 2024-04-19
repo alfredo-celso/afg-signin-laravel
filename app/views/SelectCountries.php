@@ -97,7 +97,7 @@
 
 <div class="select-box">
 	<div class="select-option">
-		<input type="text" class="form-control" placeholder="Click or touch to display and search country" id="soValue" readonly name="selectCitizen">
+		<input type="text" class="form-control" placeholder="Click or touch to display and search country" id="soValue" readonly name="selectCitizen" required>
 	</div>
 	<div class="sub-content">
 		<div class="search">
