@@ -91,7 +91,7 @@ class AdminSigninController extends Controller {
 
         // Filter data by event_type_name = "Full Motion" NOTE: Modify code to return and empty array []
         $filteredData = array_filter($data['data']['events'], function($event) {
-            return $event['event_type_name'] === 'Full Motion';
+            return $event['event_type_name'] != 'Maintenance';
         });
 
         // Sort the filtered data by device_code and event_date_start
