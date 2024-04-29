@@ -111,7 +111,7 @@
                     <th scope="row"> <?php echo $event['ID']; ?> </th>
                     <td> <?php echo $event['Date']; ?> </td>
                     <td> <?php echo $event['NameSurname']; ?> </td>
-                    <td> <?php echo $event['Citizenship']; ?> </td>
+                    <td> <?php echo $event['Citizeship']; ?> </td>
                     <td> <?php echo $event['Role']; ?> </td>
                     <td> <?php echo $event['Entry']; ?> </td>
                     <td> <?php echo $event['Customer']; ?> </td>

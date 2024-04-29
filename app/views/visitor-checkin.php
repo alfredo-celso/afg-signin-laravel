@@ -51,8 +51,8 @@
         
         <!-- Objects to be completed by user typing -->
         <div class="col-md-6">
-            <label for="inputName" class="form-label">* Name and Surname</label>
-            <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Type your name and surname..." required>
+            <label for="inputName" class="form-label">* NAME and SURNAME</label>
+            <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Type your NAME and SURNAME..." required>
         </div>
 
         <div class="col-md-6">
@@ -63,7 +63,7 @@
         </div>
 
         <div class="col-md-6">
-            <label class="form-label">Citizenship:</label>
+            <label class="form-label">* Citizenship:</label>
             <?php include 'SelectCountries.php'; ?>
         </div>
 
@@ -122,18 +122,6 @@
         }
 
     };
-
-    document.getElementById("selectRole").addEventListener("focusout", selectRole);
-
-    function selectRole() {
-        if (document.getElementById("selectRole").value == "Select role..."){
-            document.getElementById("selectRole").focus();
-        }
-    }
-
-    function closeModal(){
-        $('#exampleModal').modal('hide')
-    }
 
     function myToast(){
         //alert("Page is loaded");

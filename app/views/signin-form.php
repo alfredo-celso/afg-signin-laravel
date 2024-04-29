@@ -71,7 +71,7 @@
         </div>
 
         <div class="col-md-6">
-            <label class="form-label">Citizenship:</label>
+            <label class="form-label">* Citizenship:</label>
             <?php include 'SelectCountries.php'; ?>
         </div>
 

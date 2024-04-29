@@ -4,6 +4,7 @@
 		"s_ip": "::1", 
 		"s_training_center": "00", 
 		"s_location": "N/A",
+		"s_country": "N/A",
 		"s_lang":"EN",
 		"s_flag":"https://flagsapi.com/US/shiny/64.png"
 	},
@@ -12,6 +13,7 @@
 		"s_ip": "127.0.0.1", 
 		"s_training_center": "00", 
 		"s_location": "N/A",
+		"s_country": "N/A",
 		"s_lang":"EN",
 		"s_flag":"https://flagsapi.com/US/shiny/64.png"
 	},
@@ -20,6 +22,7 @@
 		"s_ip": "195.77.177.210", 
 		"s_training_center": "11", 
 		"s_location": "MAD",
+		"s_country": "Spain",
 		"s_lang":"ES",
 		"s_flag":"https://flagsapi.com/ES/shiny/64.png"
 	},
@@ -28,6 +31,7 @@
 		"s_ip": "212.180.218.82", 
 		"s_training_center": "12", 
 		"s_location": "WAW",
+		"s_country": "Poland",
 		"s_lang":"PL",
 		"s_flag":"https://flagsapi.com/PL/shiny/64.png"
 	},
@@ -36,6 +40,7 @@
 		"s_ip": "62.143.182.242", 
 		"s_training_center": "19", 
 		"s_location": "FRA",
+		"s_country": "Germany",
 		"s_lang":"DE",
 		"s_flag":"https://flagsapi.com/DE/shiny/64.png"
 	},
@@ -44,6 +49,7 @@
 		"s_ip": "127.0.0.1", 
 		"s_training_center": "00", 
 		"s_location": "TLV",
+		"s_country": "Israel",
 		"s_lang":"IL",
 		"s_flag":"https://flagsapi.com/IL/shiny/64.png"
 	}
