@@ -19,6 +19,10 @@ return [
     'checkout_error' => 'Check-out error. Please contact manager Training Center!',
     'report_start' => 'Please setup the parameters to query report!',
     'report_error' => 'Report error. No results with the setup parameters!',
+    'warehouse_index_start' => 'Welcome to our Warehouse web app!',
+    'warehouse_index_success' => 'Warehouse part/consumable satisfactory add!',
+    'warehouse_checkin_start' => 'Form to add part/consumable.',
+    'warehouse_checkin_error' => 'Warehouse part/consumable not saved!',
     // Add more labels as needed
 ];
 ?>

@@ -32,9 +32,10 @@
         
         <!-- Centered buttons -->
         <div class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-            <a href="index.php?url=TCSessions/showPage&var=start" class="btn btn-primary btn-lg mx-2"> &nbsp; &nbsp;<i class="fa-solid fa-paper-plane"> FFS </i> &nbsp; &nbsp;</a>
-
-            <button class="btn btn-secondary btn-lg mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa-regular fa-user"> Visitor </i> </button>
+            <a href="index.php?url=TCSessions/showPage&var=start" class="btn btn-primary btn-lg mx-2"> &nbsp; &nbsp;<i class="fa-solid fa-paper-plane"> Simulator Training </i> </a>
+            <br>
+            <br>
+            <button class="btn btn-secondary btn-lg mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">  &nbsp; &nbsp; &nbsp; &nbsp; <i class="fa-regular fa-user"> Visitor </i>  &nbsp; &nbsp; &nbsp; &nbsp;</button>
                 <div class="collapse" id="collapseExample">
                     <div class="card card-body">
                         <a href="index.php?url=VisitorCheckin/showPage&var=start" class="btn btn-success btn-lg mx-2"> Check-in <i class="fa-solid fa-arrow-right-to-bracket"> </i> </a>

@@ -18,15 +18,20 @@ $var = isset($_GET['slowa']) ? $_GET['slowa'] : 'G1T6TQraLpx!';
                 </div>
             <?php if ($_GET['slowa']<>'G1T6TQraLpx!'){ ?>
                 <div class="ml-auto">
-                    <span class="text-right"> <a href="/index.php?url=Login/showPage&var=start"> <i class="fa-solid fa-screwdriver-wrench"></i> Admin </a> </span>
+                    <span class="text-right"> <a href="/index.php?url=Login/showPage&var=start"> <i class="fa-solid fa-screwdriver-wrench"> </i> <span class="badge text-bg-danger"> Admin </span> </a> </span>
                 </div>
             <?php } else { ?>
                 <div class="ml-auto">
-                    <span class="text-right"> <a href="/index.php?url=AdminReports/showPage&var=start&slowa=G1T6TQraLpx!"> <i class="fa-solid fa-file"></i> Reports </a> </span>
+                    <span class="text-right"> <a href="/index.php?url=AdminReports/showPage&var=start&slowa=G1T6TQraLpx!"> <i class="fa-solid fa-file"></i> <span class="badge text-bg-info"> Reports </span> </a> </span>
                 </div>
                 <div class="ml-auto">
-                    <span class="text-right"> <a href="/index.php?url=AdminSignin/showPage&var=start&slowa=G1T6TQraLpx!"> <i class="fa-solid fa-paper-plane"></i> Register FFS </a> </span>
+                    <span class="text-right"> <a href="/index.php?url=AdminSignin/showPage&var=start&slowa=G1T6TQraLpx!"> <i class="fa-solid fa-paper-plane"></i> <span class="badge text-bg-info"> Register FFS </span> </a> </span>
                 </div>
+
+                <div class="ml-auto">
+                    <!-- <span class="text-right"> <a href="/index.php?url=WarehouseIndex/showPage&var=start&slowa=G1T6TQraLpx!"> <i class="fa-solid fa-screwdriver-wrench"></i> <span class="badge text-bg-info"> Warehouse </span> </a> </span> -->
+                </div>
+
 
             <?php } ?>
             <!-- Add navigation or any other header content here -->

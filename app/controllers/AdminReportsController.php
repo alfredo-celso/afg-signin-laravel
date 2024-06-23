@@ -43,9 +43,6 @@ class AdminReportsController extends Controller {
         $filterTC = array_filter($jsonDataCountryIP, function($item) {
             return $item['s_training_center'] !== '00';
         });
-        // Convert the filtered data back to JSON
-        //$jsonTCList = json_encode(array_values($filterTC));
-        //echo $jsonTCList;
 
         // Include the specific view (home.php) within the layout
         $content = BASE_DIR . '/../app/views/admin-reports.php';
