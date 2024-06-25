@@ -21,6 +21,7 @@
         <?php $jsonEncodeArray = urlencode(json_encode($matchingRow)); ?>
         <img src="<?php echo $matchingRow['s_flag'] ?>">
         <br>
+        <br>
         <a class="btn btn-outline-danger" href="/index.php?url=TCSessions/showPage&var=start" role="button"> Return to sessions </a>
 
         <?php

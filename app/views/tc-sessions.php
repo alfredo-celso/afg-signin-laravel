@@ -48,6 +48,8 @@
                     </li>        
                 <?php endforeach; ?>
             </ul>
+            <br>
+            <br>
         <?php
             }
         ?>

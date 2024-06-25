@@ -58,7 +58,7 @@ class TCSessionsController extends Controller {
 
         // 11 is MADRID, assumed as a default and uncomment fix value for testing purpose
         $deviceLocationId = $matchingRow['s_training_center'];
-        //$deviceLocationId = '12';
+        //$deviceLocationId = '19';
         
         // Init curl library
         $curl = curl_init();
