@@ -20,6 +20,8 @@
 
         <?php $jsonEncodeArray = urlencode(json_encode($matchingRow)); ?>
         <img src="<?php echo $matchingRow['s_flag'] ?>">
+        <br>
+        <a class="btn btn-outline-danger" href="/index.php?url=TCSessions/showPage&var=start" role="button"> Return to sessions </a>
 
         <?php
         // Group events by device_code
@@ -38,19 +40,9 @@
             if (count($filteredEvents) === 0){
                 echo "<h3 style='background-color:red; color:white;'> NO SESSIONS </h3>";
                 $toastMessage = $labels['sessions_cero'];    
-            } else {
-        ?>        
-            <ul class="nav"> <b> Filter SIM model: &nbsp; &nbsp; </b>  
-                <?php foreach ($filtersOption as $filterOption): ?>
-                    <li class="nav-item">
-                        <a class="btn btn-outline-danger" href=" <?php echo $filterOption['filter_url'] ?> " role="button"> <?php echo $filterOption['device_type']; ?> </a> &nbsp; &nbsp;
-                        <!-- <a class="nav-link active" aria-current="page" href="#"> <span class="badge text-bg-primary">  </span> </a> -->
-                    </li>        
-                <?php endforeach; ?>
-            </ul>
-        <?php
             }
         ?>
+
         <?php foreach ($groupedData as $deviceCode => $events): ?>
             <div>
                 <h3>SIM:<?php echo $deviceCode; ?></h3>

@@ -16,6 +16,7 @@ require_once BASE_DIR . '/../app/controllers/AdminReportsController.php';
 require_once BASE_DIR . '/../app/controllers/AdminSigninController.php';
 require_once BASE_DIR . '/../app/controllers/WarehouseIndexController.php';
 require_once BASE_DIR . '/../app/controllers/WarehouseCheckinController.php';
+require_once BASE_DIR . '/../app/controllers/FilterTCSessionsController.php';
 
 require_once BASE_DIR . '/../utilities/Router.php';
 
@@ -26,6 +27,7 @@ use App\Controllers\TCSessionsController;
 use App\Controllers\SigninFormController;
 use App\Controllers\VisitorCheckinController;
 use App\Controllers\VisitorCheckoutController;
+use App\Controllers\FilterTCSessionsController;
 // Administration
 use App\Controllers\LoginController;
 use App\Controllers\AdminReportsController;

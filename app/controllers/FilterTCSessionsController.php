@@ -1,10 +1,19 @@
 <?php
 
-// app/controllers/TCSessionsController.php
+// app/controllers/FilterTCSessionsController.php
 namespace App\Controllers;
 
-class TCSessionsController extends Controller {
+class FilterTCSessionsController extends Controller {
     public function showPage() {
+
+        if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+            // Handle GET request
+            $this->handleGet();
+        } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Handle POST request
+            $this->handlePost();
+        }
+
         define('BASE_DIR', __DIR__);
         // Correct the include path for config.php
         $configFilePath = BASE_DIR . '/../config.php';
@@ -58,7 +67,7 @@ class TCSessionsController extends Controller {
 
         // 11 is MADRID, assumed as a default and uncomment fix value for testing purpose
         $deviceLocationId = $matchingRow['s_training_center'];
-        //$deviceLocationId = '12';
+        //$deviceLocationId = '11';
         
         // Init curl library
         $curl = curl_init();
@@ -111,7 +120,7 @@ class TCSessionsController extends Controller {
         $filteredDataWithHour = array_map(function($event) {
             $event['event_hour_start'] = intval(date('H', strtotime($event['event_date_start'])));
             $event['device_type'] = substr($event['device_code'], 0, 4);
-            $event['filter_url'] = "/index.php?url=FilterTCSessions/showPage&var=start&filter=".$event['device_type'];
+            $event['filter_url'] = "#";
             return $event;
         }, $filteredData);
 
@@ -124,9 +133,10 @@ class TCSessionsController extends Controller {
         // Define the filter function
         $filterFunction = function($event) use ($currentHour) {
             $eventHour = $event['event_hour_start'];
+            $deviceType = $event['device_type'];
 
             // Check if event_hour_start is within 3 hours of the current hour
-            return $eventHour >= ($currentHour - 3) && $eventHour <= ($currentHour + 3);;
+            return $eventHour >= ($currentHour - 3) && $eventHour <= ($currentHour + 3) && $deviceType == $_GET['filter'] ;
         };
 
         // Filter the data
@@ -136,24 +146,34 @@ class TCSessionsController extends Controller {
         // echo 'Array with hours filtered <br> ' . json_encode($filteredEvents) . "<br>"; 
         // Filtering with the current hour ==========================================================================
 
-        // Creating a Filtering menu with the aircraft type ==========================================================
-        $filtersOption = [];
-        foreach ($filteredDataWithHour as $event) {
-            $key = $event['device_type'];
-            if (!isset($filtersOption[$key])) {
-                $filtersOption[$key] = [
-                    'device_type' => $event['device_type'],
-                    'filter_url' => $event['filter_url']
-                ];
-            }
-        };
-
-        // Index filter array
-        $filtersOption = array_values($filtersOption);
-
         // Include the specific view (home.php) within the layout
-        $content = BASE_DIR . '/../app/views/tc-sessions.php';
+        $content = BASE_DIR . '/../app/views/filter-tc-sessions.php';
         include BASE_DIR . '/../templates/layout.php';        
     }
+
+    private function handleGet() {
+        // Perform actions for the GET method (NO DATA RESULTS)
+        $filter = isset($_GET['filter']) ? $_GET['filter'] : '';
+        if ($_GET['filter']===''){
+            echo "<div style='background-color: orange; color: black;'><i class='fa-solid fa-bug'></i> WARNING: No filter setup for SIM </div>";
+        }
+
+        if($_GET['var']==='results'){
+        }
+
+        if($_GET['var']==='error'){
+            
+        }
+    
+    }
+
+    private function handlePost() {
+        // Perform actions for the POST method (e.g., process form submission)
+        $var = isset($_POST['var']) ? $_POST['var'] : 'search';
+
+    }
+
+
+
 }
 ?>
