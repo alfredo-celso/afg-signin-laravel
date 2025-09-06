@@ -7,7 +7,7 @@ $var = isset($_GET['slowa']) ? $_GET['slowa'] : 'G1T6TQraLpx!';
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php?url=Home/index&var=start">
-                <img src="/assets/img/Logo-AFG.jpg" alt="Your Logo" height="75" class="d-inline-block align-middle">
+                <?php include 'logo.php'; ?>
             </a>
             <div class="ml-auto"> 
                     <span class="text-center">

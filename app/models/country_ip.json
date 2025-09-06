@@ -6,7 +6,8 @@
 		"s_location": "N/A",
 		"s_country": "N/A",
 		"s_lang":"EN",
-		"s_flag":"https://flagsapi.com/FM/shiny/64.png"
+		"s_flag":"https://flagsapi.com/FM/shiny/64.png",
+		"s_logo":"/assets/img/iKarus.png"
 	},
 	{
 		"n_id":"2",
@@ -15,7 +16,8 @@
 		"s_location": "N/A",
 		"s_country": "N/A",
 		"s_lang":"EN",
-		"s_flag":"https://flagsapi.com/FM/shiny/64.png"
+		"s_flag":"https://flagsapi.com/FM/shiny/64.png",
+		"s_logo":"/assets/img/iKarus.png"
 	},
 	{
 		"n_id":"3",
@@ -24,7 +26,8 @@
 		"s_location": "MAD",
 		"s_country": "Spain",
 		"s_lang":"ES",
-		"s_flag":"https://flagsapi.com/ES/shiny/64.png"
+		"s_flag":"https://flagsapi.com/ES/shiny/64.png",
+		"s_logo":"/assets/img/Logo-AFG.jpg"
 	},
 	{
 		"n_id":"4",
@@ -33,7 +36,8 @@
 		"s_location": "WAW",
 		"s_country": "Poland",
 		"s_lang":"PL",
-		"s_flag":"https://flagsapi.com/PL/shiny/64.png"
+		"s_flag":"https://flagsapi.com/PL/shiny/64.png",
+		"s_logo":"/assets/img/enterair_logo.png"
 	},
 	{
 		"n_id":"5",
@@ -42,7 +46,8 @@
 		"s_location": "FRA",
 		"s_country": "Germany",
 		"s_lang":"DE",
-		"s_flag":"https://flagsapi.com/DE/shiny/64.png"
+		"s_flag":"https://flagsapi.com/DE/shiny/64.png",
+		"s_logo":"/assets/img/Logo-AFG.jpg"
 	},
 	{
 		"n_id":"6",
@@ -51,6 +56,7 @@
 		"s_location": "TLV",
 		"s_country": "Israel",
 		"s_lang":"IL",
-		"s_flag":"https://flagsapi.com/IL/shiny/64.png"
+		"s_flag":"https://flagsapi.com/IL/shiny/64.png",
+		"s_logo":"/assets/img/Logo-AFG.jpg"
 	}
 ]
